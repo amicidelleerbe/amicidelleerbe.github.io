@@ -35,7 +35,7 @@ article {
   float: left;
   padding: 20px;
   width: 70%;
-  background-color: #f1f1f1;
+  background-color: #9ad7b1;
   height: 300px; /* only for demonstration, should be removed */
 }
 
@@ -48,6 +48,7 @@ section::before {
 
 /* Style the footer */
 footer {
+  display:flex;
   background-color: #777;
   padding: 10px;
   text-align: center;
@@ -60,4 +61,13 @@ footer {
     width: 100%;
     height: auto;
   }
+}
+
+.logobcc{
+  justify-content: center;
+  float: left;
+}
+
+div{
+  display:inline-block;
 }
