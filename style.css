@@ -1,15 +1,18 @@
-
 * {
   box-sizing: border-box;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #9ad7b1;
+  /* Se tutto il resto fallisce, questo colora di verde l'intera pagina di fondo! */
+  margin: 0;
+  padding: 0;
 }
 
 /* Style the header */
 header {
-  background-color: #666;
+  background-color: #4a8c49;
   padding: 30px;
   text-align: center;
   font-size: 35px;
@@ -18,56 +21,106 @@ header {
 
 /* Create two columns/boxes that floats next to each other */
 nav {
-  float: left;
+  float: right;
+  /* Sposta l'intero blocco sul margine destro dello schermo */
   width: 30%;
-  height: 300px; /* only for demonstration, should be removed */
-  background: #ccc;
+  /* Copre il restante 30% della larghezza della pagina */
+  height: auto;
+  background-color: #9ad7b1;
   padding: 20px;
+  text-align: right;
+  /* Allinea anche i testi dei collegamenti a destra */
 }
 
 /* Style the list inside the menu */
 nav ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 article {
   float: left;
   padding: 20px;
+  /* Crea 20px di spazio sopra, sotto, a destra e a sinistra */
   width: 70%;
   background-color: #9ad7b1;
-  height: 300px; /* only for demonstration, should be removed */
+  height: auto;
+  /* riquadro più flessibile alla lunghezza del testo */
 }
 
 /* Clear floats after the columns */
 section::before {
-  content: "";
-  display: table;
-  clear: both;
+  background-color: #9ad7b1 !important;
+  /* Forza il verde */
+  overflow: hidden;
+  /* Risolve il collasso dei float */
+  min-height: 100vh;
+  /* sezione alta almeno quanto tutta la schermata del PC */
+  display: block;
 }
 
 /* Style the footer */
 footer {
-  display:flex;
-  background-color: #777;
-  padding: 10px;
+  clear: both;
+  /* 1. Spinge l'intero footer sotto la pagina */
+  background-color: #4a8c49;
+  padding: 20px;
+  /* 3. Aumenta padding */
   text-align: center;
-  color: white;
+  /* 4. Centra tutto quello che c'è dentro */
+  color: #fff;
+  /* 5. Testo scritto in bianco */
 }
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
-  nav, article {
-    width: 100%;
+
+  nav {
+    float: left;
+    width: 30%;
+    height: auto;
+    background-color: #9ad7b1;
+    /* Lo stesso verde! */
+    padding: 20px;
+  }
+
+  article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #9ad7b1;
+    /* Lo stesso verde! */
     height: auto;
   }
 }
 
-.logobcc{
-  justify-content: center;
-  float: left;
+.logobcc {
+  display: block;
+  /* Cambiato da float a block per tenerlo dentro il grigio */
+  margin: 0 auto;
+  /* Centra il logo orizzontalmente */
+  text-align: left;
 }
 
-div{
-  display:inline-block;
+div {
+  display: inline-block;
+}
+
+/* * Colore dei link nel menu di destra */
+nav ul li a {
+  color: #ca8787;
+  /* Scegli il colore: ad esempio #ffffff li rende bianchi */
+  text-decoration: none;
+  /* OPZIONALE: Rimuove la classica sottolineatura blu sotto i link */
+  font-weight: bold;
+  /* OPZIONALE: Rende il testo in grassetto per farlo risaltare */
+}
+
+/* * Effetto quando passi sopra con il mouse (Hover) */
+nav ul li a:hover {
+  color: #ce6767;
+  /* Il link cambia colore (es. diventa grigio scuro) quando ci passi sopra */
+  text-decoration: underline;
+  /* Fa riapparire la sottolineatura solo quando ci passi sopra */
 }
