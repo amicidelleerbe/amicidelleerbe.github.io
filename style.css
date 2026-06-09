@@ -1,126 +1,142 @@
-* {
-  box-sizing: border-box;
-}
+/* ==========================================================================
+   PALETTE COLORI E IMPOSTAZIONI GENERALI (Stile Botanico Attenuato)
+   ========================================================================== */
 
+/* Sfondo della pagina modificato: ora è un verde chiarissimo, tenue e opaco, riposante per la vista */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #9ad7b1;
-  /* Se tutto il resto fallisce, questo colora di verde l'intera pagina di fondo! */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #EBF2E9;
+  /* Un verde-grigio chiarissimo e morbido, non accecante */
+  color: #2F3E2B;
+  /* Verde scurissimo per il testo principale */
   margin: 0;
   padding: 0;
+  line-height: 1.6;
+  /* Ottima spaziatura per le righe dello statuto */
 }
 
-/* Style the header */
-header {
-  background-color: #4a8c49;
+/* Contenitore principale del testo (la scheda centrale) */
+section {
+  max-width: 900px;
+  margin: 40px auto;
   padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
+  background-color: #FFFFFF;
+  /* Sfondo bianco puro solo dove si legge, per il massimo contrasto */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  /* Ombra ancora più sfumata */
 }
 
-/* Create two columns/boxes that floats next to each other */
+/* ==========================================================================
+   MENU DI NAVIGAZIONE (Spostato in alto in cima alla pagina)
+   ========================================================================== */
+
 nav {
-  float: right;
-  /* Sposta l'intero blocco sul margine destro dello schermo */
-  width: 30%;
-  /* Copre il restante 30% della larghezza della pagina */
-  height: auto;
-  background-color: #9ad7b1;
-  padding: 20px;
-  text-align: right;
-  /* Allinea anche i testi dei collegamenti a destra */
+  background-color: #87A982;
+  /* Il Verde Salvia della palette */
+  margin: 0;
+  /* Rimosso il margine per farlo aderire alla cima del browser */
+  padding: 12px 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* Style the list inside the menu */
 nav ul {
   list-style-type: none;
-  padding: 0;
   margin: 0;
-}
-
-article {
-  float: left;
-  padding: 20px;
-  /* Crea 20px di spazio sopra, sotto, a destra e a sinistra */
-  width: 70%;
-  background-color: #9ad7b1;
-  height: auto;
-  /* riquadro più flessibile alla lunghezza del testo */
-}
-
-/* Clear floats after the columns */
-section::before {
-  background-color: #9ad7b1 !important;
-  /* Forza il verde */
-  overflow: hidden;
-  /* Risolve il collasso dei float */
-  min-height: 100vh;
-  /* sezione alta almeno quanto tutta la schermata del PC */
-  display: block;
-}
-
-/* Style the footer */
-footer {
-  clear: both;
-  /* 1. Spinge l'intero footer sotto la pagina */
-  background-color: #4a8c49;
-  padding: 20px;
-  /* 3. Aumenta padding */
+  padding: 0;
   text-align: center;
-  /* 4. Centra tutto quello che c'è dentro */
-  color: #fff;
-  /* 5. Testo scritto in bianco */
 }
 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-
-  nav {
-    float: left;
-    width: 30%;
-    height: auto;
-    background-color: #9ad7b1;
-    /* Lo stesso verde! */
-    padding: 20px;
-  }
-
-  article {
-    float: left;
-    padding: 20px;
-    width: 70%;
-    background-color: #9ad7b1;
-    /* Lo stesso verde! */
-    height: auto;
-  }
-}
-
-.logobcc {
-  display: block;
-  /* Cambiato da float a block per tenerlo dentro il grigio */
-  margin: 0 auto;
-  /* Centra il logo orizzontalmente */
-  text-align: left;
-}
-
-div {
+nav ul li {
   display: inline-block;
+  margin: 0 18px;
 }
 
-/* * Colore dei link nel menu di destra */
 nav ul li a {
-  color: #ca8787;
-  /* Scegli il colore: ad esempio #ffffff li rende bianchi */
+  color: #FAF8F2;
+  /* Testo color panna */
   text-decoration: none;
-  /* OPZIONALE: Rimuove la classica sottolineatura blu sotto i link */
   font-weight: bold;
-  /* OPZIONALE: Rende il testo in grassetto per farlo risaltare */
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* * Effetto quando passi sopra con il mouse (Hover) */
+/* Effetto al passaggio del mouse sui pulsanti */
 nav ul li a:hover {
-  color: #ce6767;
-  /* Il link cambia colore (es. diventa grigio scuro) quando ci passi sopra */
-  text-decoration: underline;
-  /* Fa riapparire la sottolineatura solo quando ci passi sopra */
+  background-color: #FAF8F2;
+  /* Il fondo del pulsante diventa panna */
+  color: #556B4D;
+  /* Il testo diventa verde bosco */
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   TITOLI
+   ========================================================================== */
+
+/* Il titolo principale dell'associazione */
+header h1 {
+  text-align: center;
+  color: #556B4D;
+  /* Verde bosco, per staccare meglio dallo sfondo tenue */
+  font-size: 2.6rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Titoli dei capitoli e degli articoli */
+article h2,
+article h3 {
+  color: #43543D;
+  /* Un verde istituzionale leggermente più scuro e leggibile */
+  border-left: 5px solid #A1CD6F;
+  /* Linea verticale verde mela brillante */
+  padding-left: 12px;
+  margin-top: 35px;
+}
+
+/* ==========================================================================
+   TESTI DELLO STATUTO
+   ========================================================================== */
+
+article p {
+  margin-bottom: 15px;
+  text-align: justify;
+  /* Testo perfettamente allineato a destra e a sinistra */
+}
+
+article ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+article ul li {
+  margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   FOOTER (Con logo della banca ingrandito)
+   ========================================================================== */
+
+footer {
+  text-align: center;
+  margin: 50px 0 30px 0;
+  padding-top: 25px;
+  border-top: 1px solid #D0DDD0;
+  /* Linea di divisione che si adatta al nuovo sfondo */
+}
+
+/* Ingrandito il logo per dargli più respiro e visibilità */
+footer img {
+  max-width: 450px;
+  /* Portato da 250px a 450px come richiesto */
+  width: 100%;
+  /* Impedisce al logo di uscire dallo schermo sui telefoni */
+  height: auto;
+  opacity: 0.9;
+  /* Leggermente più nitido e visibile */
 }
