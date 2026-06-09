@@ -140,3 +140,38 @@ footer img {
   opacity: 0.9;
   /* Leggermente più nitido e visibile */
 }
+
+
+/* ==========================================================================
+   OTTIMIZZAZIONE PER SMARTPHONE (Schermi fino a 768px di larghezza)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+
+  /* 1. Diamo più spazio ai contenuti centrali */
+  section {
+    margin: 15px;
+    /* Riduciamo lo spazio esterno */
+    padding: 15px;
+    /* Riduciamo lo spazio interno per dare più millimetri al testo */
+  }
+
+  /* 2. Rimpiccioliamo leggermente il titolo principale per non farlo andare a capo male */
+  header h1 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+  }
+
+  /* 3. TRASFORMIAMO IL MENU: Le voci si dispongono in verticale, una sotto l'altra */
+  nav ul li {
+    display: block;
+    /* Non più di fianco, ma uno sotto l'altro come un elenco */
+    margin: 10px 0;
+    /* Spazio verticale tra un pulsante e l'altro */
+  }
+
+  nav ul li a {
+    display: block;
+    /* Il link occupa tutta la larghezza, rendendo più facile cliccarlo con il dito */
+    padding: 10px;
+  }
+}
