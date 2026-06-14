@@ -175,3 +175,32 @@ footer img {
     padding: 10px;
   }
 }
+
+/* ==========================================================================
+   STILE DEI LINK (Solo per il testo, non tocca il menu)
+   ========================================================================== */
+
+/* Colore del link per il modulo (colpisce solo i link dentro la scheda <section>) */
+section a {
+  color: #87A982 !important;
+  /* Forza il Verde Salvia della tua palette */
+  text-decoration: underline !important;
+  /* Mantiene la sottolineatura nel testo */
+  font-weight: 600;
+  /* Lo rende ben evidente */
+  transition: color 0.2s ease;
+}
+
+/* Colore del link nel testo quando ci passi sopra con il mouse */
+section a:hover {
+  color: #556B4D !important;
+  /* Diventa Verde Bosco scuro */
+  text-decoration: none !important;
+  /* Toglie la sottolineatura al passaggio */
+}
+
+/* Colore del link nel testo dopo che è stato già cliccato */
+section a:visited {
+  color: #72926D !important;
+  /* Un verde intermedio */
+}
