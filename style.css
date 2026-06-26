@@ -204,3 +204,144 @@ section a:visited {
   color: #72926D !important;
   /* Un verde intermedio */
 }
+
+
+/* ==========================================================================
+   STRUTTURA EVENTI CON MINIATURA
+   ========================================================================== */
+
+/* Affianca la miniatura e il testo dell'evento */
+.evento-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  /* Spazio tra l'immagine e il testo */
+  margin-top: 20px;
+  background: #fdfdfd;
+  padding: 15px;
+  border-radius: 6px;
+  border-left: 4px solid #87A982;
+  /* Un richiamo al nostro verde salvia */
+}
+
+/* Stile della miniatura (piccola e ordinata) */
+.locandina-mini {
+  width: 120px;
+  /* Dimensione della miniatura della locandina */
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+  display: block;
+}
+
+/* Effetto zoom leggero quando si passa il mouse sulla miniatura */
+.locandina-link:hover .locandina-mini {
+  transform: scale(1.04);
+}
+
+/* Contenitore del testo dell'evento */
+.evento-testo {
+  flex: 1;
+  /* Occupa tutto lo spazio rimasto a destra */
+}
+
+.evento-testo h3 {
+  margin-top: 0 !important;
+  /* Allinea il titolo dell'evento alla cima della locandina */
+  border-left: none !important;
+  /* Togliamo la linea generica dei titoli qui */
+  padding-left: 0 !important;
+}
+
+/* ==========================================================================
+   IL POP-UP (LIGHTBOX) IN CSS PURO
+   ========================================================================== */
+
+/* Lo sfondo scuro che copre lo schermo quando il pop-up è attivo */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  /* Sfondo nero semi-trasparente */
+  transition: opacity 500ms;
+  visibility: hidden;
+  /* Di base è nascosto */
+  opacity: 0;
+  z-index: 9999;
+  /* Sta sopra a tutto il resto del sito */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LA MAGIA: Quando il link punta all'ID del pop-up (#popup-locandina), questo si mostra */
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* L'immagine grande dentro il pop-up */
+.popup-img {
+  max-width: 90%;
+  max-height: 85vh;
+  /* Non supera l'altezza dello schermo del telefono/PC */
+  border-radius: 4px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Il pulsante per chiudere (la "X") */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.close:hover {
+  color: #A1CD6F;
+  /* Diventa verde mela quando ci passi sopra */
+}
+
+/* Ottimizzazione per smartphone: mette l'immagine sopra e il testo sotto */
+@media screen and (max-width: 600px) {
+  .evento-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .locandina-mini {
+    width: 150px;
+    /* Leggermente più grande sui telefoni essendo centrata */
+  }
+}
+
+/* Stile della miniatura: la blocchiamo a una dimensione ridotta */
+.locandina-mini,
+.locandina-link img {
+  width: 120px !important;
+  /* Riduce la larghezza a soli 120 pixel */
+  height: 160px !important;
+  /* Imposta un'altezza proporzionata da locandina verticale */
+  object-fit: cover;
+  /* Evita che l'immagine si distorca o si schiacci */
+  border-radius: 6px;
+  /* Arrotonda leggermente gli angoli */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  /* Aggiunge un'ombra leggera molto elegante */
+  transition: transform 0.2s ease;
+  display: block;
+}
+
+/* Quando passi il mouse sopra la miniatura, fa un piccolissimo movimento fluido */
+.locandina-link:hover img {
+  transform: scale(1.04);
+}
