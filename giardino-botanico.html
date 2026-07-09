@@ -1,92 +1,91 @@
 <!DOCTYPE html>
-<html lang="it">
+<ht lang="it">
 
-<head>
-    <link rel="icon" type="image/x-icon" href="immagini/icona/favicon.ico">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <link rel="icon" type="image/x-icon" href="immagini/icona/favicon.ico">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Amici delle Erbe</title>
-    <link rel="stylesheet" href="style.css">
+        <title>Amici delle Erbe</title>
+        <link rel="stylesheet" href="style.css">
 
-    <meta charset="UTF-8">
-    <title>Prossimi eventi - Amici delle Erbe</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+        <meta charset="UTF-8">
+        <title>Prossimi eventi - Amici delle Erbe</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contatti.html">Come contattarci</a></li>
-            <li><a href="prossimi-eventi.html">Prossimi eventi</a></li>
-            <li><a href="consiglio-direttivo.html">Consiglio direttivo</a></li>
-            <li><a href="giardino-botanico.html">Giardino botanico Brumati</a></li>
-            <li><a href="statuto.html">Statuto</a></li>
-        </ul>
-    </nav>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contatti.html">Come contattarci</a></li>
+                <li><a href="prossimi-eventi.html">Prossimi eventi</a></li>
+                <li><a href="consiglio-direttivo.html">Consiglio direttivo</a></li>
+                <li><a href="giardino-botanico.html">Giardino botanico Brumati</a></li>
+                <li><a href="statuto.html">Statuto</a></li>
+            </ul>
+        </nav>
 
-    <header>
-        <h1>Amici delle Erbe</h1>
-    </header>
+        <header>
+            <h1>Amici delle Erbe</h1>
+        </header>
 
 
-    <section>
-        <article>
-            <h2>Le Piante del Nostro Giardino</h2>
-            <p>Questa pagina è in costruzione per farvi avere tutte le informazioni sulle piante che ospitiamo e curiamo
-                nel giardino botanico Brumati!</p>
+        <section>
+            <article>
+                <h2>Le Piante del Nostro Giardino</h2>
+                <p>Questa pagina è in costruzione per farvi avere tutte le informazioni sulle piante che ospitiamo e
+                    curiamo
+                    nel giardino botanico Brumati!</p>
 
-            <div class="giardino-accordion">
+                <div class="giardino-accordion">
 
-                <details class="pianta-item" id="rosmarino">
-                    <summary class="pianta-nome">Rosmarino (Salvia rosmarinus)</summary>
-                    <div class="pianta-contenuto">
-                        <img src="immagini/piante/rosmarino.jpg" alt="Rosmarino" class="pianta-foto">
-                        <div class="pianta-info">
-                            <p><strong>Famiglia:</strong> Lamiaceae</p>
-                            <p>Aromatica perenne tipica della macchia mediterranea.</p>
+                    <details class="pianta-item" id="rosmarino">
+                        <summary class="pianta-nome">Rosmarino (Salvia rosmarinus)</summary>
+                        <div class="pianta-contenuto">
+                            <img src="immagini/piante/rosmarino.jpg" alt="Rosmarino" class="pianta-foto">
+                            <div class="pianta-info">
+                                <p><strong>Famiglia:</strong> Lamiaceae</p>
+                                <p>Aromatica perenne tipica della macchia mediterranea.</p>
+                            </div>
                         </div>
-                    </div>
-                </details>
+                    </details>
 
-                <details class="pianta-item" id="lavanda">
-                    <summary class="pianta-nome">Lavanda (Lavandula angustifolia)</summary>
-                    <div class="pianta-contenuto">
-                        <img src="immagini/piante/lavanda.jpg" alt="Lavanda" class="pianta-foto">
-                        <div class="pianta-info">
-                            <p><strong>Famiglia:</strong> Lamiaceae</p>
-                            <p>Famosa per il suo profumo rilassante e le spighe violacee.</p>
+                    <details class="pianta-item" id="lavanda">
+                        <summary class="pianta-nome">Lavanda (Lavandula angustifolia)</summary>
+                        <div class="pianta-contenuto">
+                            <img src="immagini/piante/lavanda.jpg" alt="Lavanda" class="pianta-foto">
+                            <div class="pianta-info">
+                                <p><strong>Famiglia:</strong> Lamiaceae</p>
+                                <p>Famosa per il suo profumo rilassante e le spighe violacee.</p>
+                            </div>
                         </div>
-                    </div>
-                </details>
+                    </details>
 
+                </div>
+            </article>
+        </section>
+
+        <footer>
+            <div class="logobcc">
+                <img src="immagini/logo BCC.jpg" alt="logo BCC" width="382" height="102">
             </div>
-        </article>
-    </section>
+        </footer>
 
-    <footer>
-        <div class="logobcc">
-            <img src="immagini/logo BCC.jpg" alt="logo BCC" width="382" height="102">
-        </div>
-    </footer>
-
-    <script>
-        // Se il link contiene un ID (es. #rosmarino), trova la pianta, aprila e vai lì
-        function apriPiantaDaLink() {
-            const hash = window.location.hash;
-            if (hash) {
-                const elemento = document.querySelector(hash);
-                if (elemento && elemento.tagName === 'DETAILS') {
-                    elemento.setAttribute('open', ''); // Apre la fisarmonica
-                    elemento.scrollIntoView({ behavior: 'smooth' }); // Ci va sopra con un movimento fluido
+        <script>
+            // Se il link contiene un ID (es. #rosmarino), trova la pianta, aprila e vai lì
+            function apriPiantaDaLink() {
+                const hash = window.location.hash;
+                if (hash) {
+                    const elemento = document.querySelector(hash);
+                    if (elemento && elemento.tagName === 'DETAILS') {
+                        elemento.setAttribute('open', ''); // Apre la fisarmonica
+                        elemento.scrollIntoView({ behavior: 'smooth' }); // Ci va sopra con un movimento fluido
+                    }
                 }
             }
-        }
-        // Controlla sia all'apertura della pagina sia se cambia il link
-        window.addEventListener('DOMContentLoaded', apriPiantaDaLink);
-        window.addEventListener('hashchange', apriPiantaDaLink);
-    </script>
-</body>
-
-</html>
+            // Controlla sia all'apertura della pagina sia se cambia il link
+            window.addEventListener('DOMContentLoaded', apriPiantaDaLink);
+            window.addEventListener('hashchange', apriPiantaDaLink);
+        </script>
+    </body>

@@ -352,94 +352,103 @@ section a:visited {
    ========================================================================== */
 
 .giardino-accordion {
-    margin-top: 30px;
-    max-width: 800px; /* Tiene la lista centrale e ordinata */
-    margin-left: auto;
-    margin-right: auto;
+  margin-top: 30px;
+  max-width: 800px;
+  /* Tiene la lista centrale e ordinata */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Il singolo tassello della pianta */
 .pianta-item {
-    background: #fdfdfd;
-    border: 1px solid #e2e8f0;
-    border-radius: 6px;
-    margin-bottom: 12px;
-    overflow: hidden;
-    transition: box-shadow 0.2s ease;
+  background: #fdfdfd;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
 }
 
 /* Cambia lo sfondo quando la pianta è aperta o ci si passa sopra */
-.pianta-item[open], .pianta-item:hover {
-    box-shadow: 0 4px 12px rgba(85, 107, 77, 0.1);
+.pianta-item[open],
+.pianta-item:hover {
+  box-shadow: 0 4px 12px rgba(85, 107, 77, 0.1);
 }
 
 /* Il rettangolo del nome della pianta (il pulsante cliccabile) */
 .pianta-nome {
-    padding: 15px 20px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #556B4D; /* Il nostro Verde Bosco */
-    cursor: pointer;
-    background: #fcfcfc;
-    list-style: none; /* Nasconde la freccetta standard del browser */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid transparent;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #556B4D;
+  /* Il nostro Verde Bosco */
+  cursor: pointer;
+  background: #fcfcfc;
+  list-style: none;
+  /* Nasconde la freccetta standard del browser */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid transparent;
 }
 
 /* Aggiungiamo una freccetta personalizzata elegante sulla destra */
 .pianta-nome::after {
-    content: "➔";
-    font-size: 0.9rem;
-    transition: transform 0.3s ease;
-    color: #87A982; /* Verde salvia */
+  content: "➔";
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+  color: #87A982;
+  /* Verde salvia */
 }
 
 /* Quando la pianta si espande, la freccia ruota verso il basso */
 .pianta-item[open] .pianta-nome {
-    border-bottom: 1px solid #e2e8f0;
-    background: #f7f9f6; /* Sfondo leggermente verde chiaro */
+  border-bottom: 1px solid #e2e8f0;
+  background: #f7f9f6;
+  /* Sfondo leggermente verde chiaro */
 }
+
 .pianta-item[open] .pianta-nome::after {
-    transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 /* Il contenuto nascosto che si mostra all'apertura */
 .pianta-contenuto {
-    padding: 20px;
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    background: #ffffff;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: #ffffff;
 }
 
 /* La foto della pianta ridimensionata e ordinata */
 .pianta-foto {
-    width: 150px;
-    height: 150px;
-    object-fit: cover; /* Ritaglia la foto quadrata senza distorcerla */
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  /* Ritaglia la foto quadrata senza distorcerla */
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Info testuali affiancate alla foto */
 .pianta-info {
-    flex: 1;
-    color: #4a5568;
-    line-height: 1.6;
+  flex: 1;
+  color: #4a5568;
+  line-height: 1.6;
 }
 
 /* Ottimizzazione per telefoni: foto sopra e testo sotto */
 @media screen and (max-width: 600px) {
-    .pianta-contenuto {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .pianta-foto {
-        width: 100%;
-        max-width: 250px;
-        height: 180px;
-    }
+  .pianta-contenuto {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pianta-foto {
+    width: 100%;
+    max-width: 250px;
+    height: 180px;
+  }
 }
