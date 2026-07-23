@@ -452,3 +452,23 @@ section a:visited {
     height: 180px;
   }
 }
+
+/* Pulsante Instagram */
+.btn-instagram {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #556B4D; 
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-instagram:hover {
+    background-color: #c1275b;
+    transform: translateY(-2px);
+}
