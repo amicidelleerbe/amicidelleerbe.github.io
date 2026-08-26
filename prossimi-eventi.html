@@ -32,10 +32,32 @@
     <section>
         <article>
             <h2>I Nostri Appuntamenti</h2>
+
+            <div class="evento-container" style="margin-top: 40px;">
+                <!-- 1. Miniatura della locandina (cliccabile) -->
+                <a href="#popup-nuovo-eventoS" class="locandina-link">
+                    <img src="immagini/mappaSagradeleraze.png" alt="sagradeleraze" class="locandina-mini">
+                </a>
+
+                <!-- 2. Testo dell'evento accanto alla miniatura -->
+                <div class="evento-testo">
+                    <h3>Sagra de le Raze</h3>
+                    <p><strong>Data:</strong> domenica 30 agosto</p>
+                    <p>Saremo presenti con il nostro stand alla celebre e storica Sagra de le Raze a Staranzano.
+                </div>
+
+            </div>
+
+            <!-- 3. POP-UP INGRANDITO (Si apre al clic sulla miniatura)-->
+            <div id="popup-nuovo-eventoS" class="overlay">
+                <a href="#" class="close">&times;</a>
+                <img src="immagini/mappaSagradeleraze.png" alt="sagradeleraze" class=" popup-img">
+            </div>
+
             <div class="evento-container" style="margin-top: 40px;">
 
                 <!-- 1. Miniatura della locandina (cliccabile) -->
-                <a href="#popup-nuovo-evento" class="locandina-link">
+                <a href="#popup-nuovo-eventoM" class="locandina-link">
                     <img src="immagini/villaManin2026.jpg" alt="villaManin2026" class="locandina-mini">
                 </a>
 
@@ -49,7 +71,7 @@
             </div>
 
             <!-- 3. POP-UP INGRANDITO (Si apre al clic sulla miniatura)-->
-            <div id="popup-nuovo-evento" class="overlay">
+            <div id="popup-nuovo-eventoM" class="overlay">
                 <a href="#" class="close">&times;</a>
                 <img src="immagini/villaManin2026.jpg" alt="villaManin2026" class=" popup-img">
             </div>
