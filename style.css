@@ -278,43 +278,100 @@ nav ul li a {
   padding-left: 0 !important;
 }
 
+
+
 /* ==========================================================================
-   IL POP-UP (LIGHTBOX) IN CSS PURO
+   POP-UP OVERLAY - 2 IMMAGINI AFFIANCATE (SOLUZIONE DEFINITIVA)
    ========================================================================== */
-
-/* Lo sfondo scuro che copre lo schermo quando il pop-up è attivo */
 .overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  /* Sfondo nero semi-trasparente */
-  transition: opacity 500ms;
-  visibility: hidden;
-  /* Di base è nascosto */
-  opacity: 0;
-  z-index: 9999;
-  /* Sta sopra a tutto il resto del sito */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    z-index: 99999;
+    
+    /* Centra il contenitore interno */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* LA MAGIA: Quando il link punta all'ID del pop-up (#popup-locandina), questo si mostra */
+/* Mostra il popup quando cliccato */
 .overlay:target {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
 }
 
-/* L'immagine grande dentro il pop-up */
-.popup-img {
-  max-width: 90%;
-  max-height: 85vh;
-  /* Non supera l'altezza dello schermo del telefono/PC */
-  border-radius: 4px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+/* Contenitore interno che affianca le immagini */
+.popup-content {
+    display: flex !important;
+    flex-direction: row !important; /* Forza l'affiancamento ORIZZONTALE */
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    max-width: 90vw;
+    max-height: 85vh;
+}
+
+/* Regola ENTRAMBE le immagini per essere grandi uguale */
+.popup-content img {
+    position: static !important; /* Rimuove sovrapposizioni */
+    max-width: 45vw !important;  /* Ciascuna usa fino a metà schermo */
+    max-height: 80vh !important; /* Non supera l'altezza della schermata */
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Tasto di chiusura X */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #ffffff;
+    font-size: 42px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 100000;
+}
+
+/* Versione Smartphone: le mette una sotto l'altra */
+@media screen and (max-width: 768px) {
+    .popup-content {
+        flex-direction: column !important; /* Una sotto l'altra su mobile */
+        overflow-y: auto;
+        max-height: 90vh;
+    }
+
+    .popup-content img {
+        max-width: 85vw !important;
+        max-height: 45vh !important;
+    }
+}
+
+
+
+
+/*cursore diventa lente di ingrandimento quando si passa sopra la miniatura*/
+.popup-content a {
+    display: inline-block;
+    cursor: zoom-in;
+}
+
+.popup-content a img {
+    transition: transform 0.2s ease;
+}
+
+.popup-content a:hover img {
+    transform: scale(1.02); /* Effetto leggero al passaggio del mouse */
 }
 
 /* Il pulsante per chiudere (la "X") */
