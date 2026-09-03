@@ -16,17 +16,17 @@
 
 <body>
     <nav>
-     <input type="checkbox" id="menu-toggle-check">
-    <label for="menu-toggle-check" class="menu-toggle">Menu ☰</label>
-    <ul>
-       <li><a href="index.html">Home</a></li>
-       <li><a href="contatti.html">Come contattarci</a></li>
-       <li><a href="prossimi-eventi.html">Prossimi eventi</a></li>
-       <li><a href="consiglio-direttivo.html">Consiglio direttivo</a></li>
-       <li><a href="giardino-botanico.html">Giardino botanico Brumati</a></li>
-       <li><a href="statuto.html">Statuto</a></li>
-      </ul>
-  </nav>
+        <input type="checkbox" id="menu-toggle-check">
+        <label for="menu-toggle-check" class="menu-toggle">Menu ☰</label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contatti.html">Come contattarci</a></li>
+            <li><a href="prossimi-eventi.html">Prossimi eventi</a></li>
+            <li><a href="consiglio-direttivo.html">Consiglio direttivo</a></li>
+            <li><a href="giardino-botanico.html">Giardino botanico Brumati</a></li>
+            <li><a href="statuto.html">Statuto</a></li>
+        </ul>
+    </nav>
     <header>
         <h1>Amici delle Erbe</h1>
     </header>
@@ -35,7 +35,7 @@
         <article>
             <h2>I Nostri Appuntamenti</h2>
 
-    
+
             <div class="evento-container" style="margin-top: 40px;">
 
                 <!--1. Miniatura della locandina (cliccabile)-->
@@ -54,28 +54,97 @@
             </div>
 
             <!-- 3. POP-UP INGRANDITO -->
-<div id="popup-nuovo-eventoM" class="overlay">
-    <a href="#" class="close">&times;</a>
-    <div class="popup-content">
-        <!-- Prima immagine cliccabile per ingrandire -->
-        <a href="immagini/villaManin2026.jpg" target="_blank" title="Clicca per ingrandire a tutto schermo">
-            <img src="immagini/villaManin2026.jpg" alt="Villa Manin 2026">
-        </a>
-        
-        <!-- Seconda immagine cliccabile per ingrandire -->
-        <a href="immagini/mappaManin-2026.jpg" target="_blank" title="Clicca per ingrandire a tutto schermo">
-            <img src="immagini/mappaManin-2026.jpg" alt="Mappa Villa Manin 2026">
-        </a>
-    </div>
-</div>
+            <div id="popup-nuovo-eventoM" class="overlay">
+                <a href="#" class="close">&times;</a>
+                <div class="popup-content">
+                    <!-- Prima immagine cliccabile per ingrandire -->
+                    <a href="immagini/villaManin2026.jpg" target="_blank" title="Clicca per ingrandire a tutto schermo">
+                        <img src="immagini/villaManin2026.jpg" alt="Villa Manin 2026">
+                    </a>
+
+                    <!-- Seconda immagine cliccabile per ingrandire -->
+                    <a href="immagini/mappaManin-2026.jpg" target="_blank"
+                        title="Clicca per ingrandire a tutto schermo">
+                        <img src="immagini/mappaManin-2026.jpg" alt="Mappa Villa Manin 2026">
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- ================= EVENTO 2 ================= -->
+            <div class="evento-container" style="margin-top: 40px;">
+
+                <!-- 1. Miniatura cliccabile (punta a #popup-evento2) -->
+                <a href="#popup-evento2" class="locandina-link">
+                    <img src="immagini/Villesse Andar per erbe.jpeg" alt="Andar per Erbe" class="locandina-mini">
+                </a>
+
+                <!-- 2. Testo dell'evento -->
+                <div class="evento-testo">
+                    <h3>Andar per Erbe</h3>
+                    <p><strong>Data:</strong> Sabato 12 Settembre dalle ore 10:00</p>
+                    <p>Prenotando il posto, sarà possibile partecipare a questo corso teorico pratico alla scoperta
+                        delle erbe spontanee.</p>
+                </div>
+
+            </div>
+
+            <!-- 3. POP-UP INGRANDITO PER EVENTO 2 -->
+            <div id="popup-evento2" class="overlay">
+                <a href="#" class="close">&times;</a>
+                <div class="popup-content">
+                    <a href="immagini/Villesse Andar per erbe.jpeg" target="_blank" title="Clicca per ingrandire">
+                        <img src="immagini/Villesse Andar per erbe.jpeg" alt="Andar per Erbe">
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- ================= EVENTO 3 ================= -->
+            <div class="evento-container" style="margin-top: 40px;">
+
+                <!-- 1. Miniatura cliccabile (punta a #popup-evento3) -->
+                <a href="#popup-evento3" class="locandina-link">
+                    <img src="immagini/TRA I LIBRI, TRA LE PIANTE Rochi.png" alt="Tra i libri, tra le piante"
+                        class="locandina-mini">
+                </a>
+
+                <!-- 2. Testo dell'evento -->
+                <div class="evento-testo">
+                    <h3>Tra i libri, tra le piante</h3>
+                    <p><strong>Data:</strong> Giovedì 17 Settembre ore 17:00</p>
+                    <p>Ai laghetti di Dobbia, una sessione di lettura silenziosa all'aperto e molto altro!</p>
+                </div>
+
+            </div>
+
+            <!-- 3. POP-UP INGRANDITO PER EVENTO 3 -->
+            <div id="popup-evento3" class="overlay">
+                <a href="#" class="close">&times;</a>
+                <div class="popup-content">
+                    <a href="immagini/TRA I LIBRI, TRA LE PIANTE Rochi.png" target="_blank"
+                        title="Clicca per ingrandire">
+                        <img src="immagini/TRA I LIBRI, TRA LE PIANTE Rochi.png" alt="Tra i libri, tra le piante">
+                    </a>
+                </div>
+            </div>
+
+
 
             <h2>I nostri social</h2>
             <p>Seguici per scoprire le nostre attività e rimanere aggiornato sui prossimi eventi:</p>
 
-            <a href="https://www.instagram.com/amicidelleerbe/" target="_blank" rel="noopener noreferrer"
-                class="btn-instagram">
-                📸 Seguici su Instagram
-            </a>
+            <div class="social-buttons">
+                <a href="https://www.instagram.com/amicidelleerbe/" class="btn-instagram" target="_blank"
+                    rel="noopener noreferrer">
+                    📸 Seguici su Instagram
+                </a>
+                <a href="https://www.facebook.com/share/14tXRdhrzxN" class="btn-facebook" target="_blank"
+                    rel="noopener noreferrer">
+                    👍 Seguici su Facebook
+                </a>
+            </div>
+
 
 
 
