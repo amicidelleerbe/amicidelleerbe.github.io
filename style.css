@@ -586,3 +586,23 @@ nav ul li a {
   background-color: #0d65d9;
   transform: translateY(-2px);
 }
+
+
+
+/* Stile per i doodle affiancati ai titoli H2 */
+.doodle-titolo-h2 {
+    width: 35px;           /* Imposta la larghezza desiderata (es. tra 30px e 45px) */
+    height: auto;          /* Mantiene le proporzioni corrette dell'immagine */
+    vertical-align: middle;/* Allinea il doodle al centro del testo dell'H2 */
+    margin-left: 10px;     /* Distanza dal testo del titolo */
+    display: inline-block; /* Assicura che l'immagine stia sulla stessa riga del testo */
+}
+
+/* Stile per i doodle affiancati ai titoli */
+.doodle-titolo {
+    width: 35px;           /* Imposta la larghezza desiderata (es. tra 30px e 45px) */
+    height: auto;          /* Mantiene le proporzioni corrette dell'immagine */
+    vertical-align: middle;/* Allinea il doodle al centro del testo dell'H2 */
+    margin-left: 10px;     /* Distanza dal testo del titolo */
+    display: inline-block; /* Assicura che l'immagine stia sulla stessa riga del testo */
+}
