@@ -606,3 +606,19 @@ nav ul li a {
     margin-left: 10px;     /* Distanza dal testo del titolo */
     display: inline-block; /* Assicura che l'immagine stia sulla stessa riga del testo */
 }
+
+
+.evento-testo-libero h3 {
+    border-left: none; /* Rimuove la stanghetta corta accanto al titolo */
+    padding-left: 0;   /* Azzera lo spazio vuoto associato */
+}
+/* Aggiunge il pallino verde chiaro prima del titolo */
+.evento-testo-libero h3::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #87A982; /* Scegli qui la tonalità di verde chiaro che preferisci */
+    border-radius: 50%;        /* Rende il quadratino un cerchio perfetto */
+    margin-right: 10px;        /* Distanza tra il pallino e la scritta */
+}
